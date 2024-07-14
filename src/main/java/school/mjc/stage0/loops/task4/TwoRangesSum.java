@@ -4,13 +4,15 @@ public class TwoRangesSum {
     public void printSumOfTwoRanges(int numberToSkip, int lastInRow) {
 
         int sum = 0;
+        int untilSkip = 0;
 
         for (int i = 1; i <= lastInRow; i++) {
-            sum += i;
-            if (i == numberToSkip) {
-                continue;
-            }
 
+            if (i <= numberToSkip) {
+                untilSkip += i;
+            } else {
+                sum += i;
+            }
         }
 
         if (lastInRow < 0) {
@@ -18,7 +20,7 @@ public class TwoRangesSum {
         } else if (numberToSkip > lastInRow) {
             System.out.println("number to skip is bigger then the last");
         } else {
-            System.out.println("skipped sum is " + numberToSkip);
+            System.out.println("skipped sum is " + untilSkip);
             System.out.println("counted sum is " + sum);
         }
     }
