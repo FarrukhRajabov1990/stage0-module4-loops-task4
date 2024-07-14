@@ -6,10 +6,11 @@ public class TwoRangesSum {
         int sum = 0;
 
         for (int i = 1; i <= lastInRow; i++) {
+            sum += i;
             if (i == numberToSkip) {
                 continue;
             }
-            sum += i;
+
         }
 
         if (lastInRow < 0) {
