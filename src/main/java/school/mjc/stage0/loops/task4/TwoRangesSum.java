@@ -5,7 +5,7 @@ public class TwoRangesSum {
 
         int sum = 0;
 
-        for (int i = 1; i < lastInRow; i++) {
+        for (int i = 1; i <= lastInRow; i++) {
             if (i == numberToSkip) {
                 continue;
             }
